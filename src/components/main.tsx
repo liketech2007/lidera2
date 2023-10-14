@@ -35,9 +35,8 @@ export function Main() {
           <Typography className="text-xs text-center">Até ao dia 07 de Novembro.</Typography> 
         </div>
         <div className="min-w-full flex gap-6 justify-center items-end mt-4 w-full h-[400px] lg:h-[600px]" id="conteinerFoto2">
-          
-          <Typography className="text-xl text-center mt-4">Estamos a tua espera</Typography>
         </div>
+        <Typography className="text-xl text-center mt-4">Estamos a tua espera</Typography>
         <div className="flex flex-col justify-center items-center gap-6">
           <Typography className="text-xl text-center mt-4">Nossos Parceiros</Typography>
         </div>  
