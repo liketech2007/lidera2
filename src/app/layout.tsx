@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Inscrição - IV Fórum de Empreendedorismo Emergente - Comunicação, Networking, Gestão Financeira, Gestão Emocional, Inovação e Presença no Digital. Vamos falar de Empreendedorismo Emergente?',
   openGraph: {
     url: `${process.env.NEXT_PUBLIC_URL}`,
-    title: 'Like Vendas',
+    title: 'Lidera',
     description: `Inscrição - IV Fórum de Empreendedorismo Emergente - Comunicação, Networking, Gestão Financeira, Gestão Emocional, Inovação e Presença no Digital. Vamos falar de Empreendedorismo Emergente?`,
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata = {
     siteName: 'Lidera',
   },
   twitter: {
-    handle: '@likevendas',
+    handle: '@lidera',
     site: `${process.env.NEXT_PUBLIC_URL}`,
     cardType: foto3.src,
   },
