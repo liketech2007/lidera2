@@ -14,7 +14,7 @@ export function MainLogin() {
       </div>
       <FormPay />
 
-      <div className="flex flex-col gap-3 p-3 md:max-w-[60%]">
+      <div className="flex flex-col gap-3 p-3 md:max-w-[60%]" >
         <h1 className="text-1xl">Termo e Condições</h1>
 
         <p className="text-xs">Ao efetuar a inscrição no IV Fórum de Empreendedorismo Emergente, declara ter lido, compreendido e concordado com todos os termos e condições mencionados abaixo:</p>
@@ -29,7 +29,7 @@ export function MainLogin() {
                                     </li>
     <li>
     <strong>Adiamento por parte da LIDERA:</strong>
-    <ul className="flex flex-col gap-2">
+    <ul className="flex flex-col gap-2" id="ler">
     <li>a) A LIDERA reserva-se ao direito de adiar o evento para uma data futura, sempre que o número pretendido de inscritos não for alcançado.</li>
     <li>b) Quando um evento for adiado e/ou cancelado pela LIDERA, o formando inscrito terá direito a um reembolso de 100% do valor investido, desde que solicite o reembolso.</li>
     </ul>

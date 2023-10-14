@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import jsPDF from "jspdf";
 import { UploadSimple } from "phosphor-react"
+import Link from "next/link";
                    
 export function FormPay() {
 
@@ -175,7 +176,7 @@ export function FormPay() {
             uploadFile(e)
           }} /> 
         </div>
-
+        <a href="#ler" className="py-4 hover:text-zinc-400">Ler os termos e condiçẽs</a>
         <div className="mb-4"> <label className="block text-sm font-medium text-white">
           <input type="checkbox" name="aceitaTermos" className="mr-2"
           required
