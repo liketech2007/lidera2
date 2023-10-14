@@ -185,8 +185,8 @@ export function FormPay() {
         <button type="submit" className="bg-white text-black py-4 px-4 rounded-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-opacity-50 flex gap-3 justify-center items-center" >
           {load === true && <Spinner className="animate-spin" color="blue" />}Enviar</button>
         </div>
-        <div className="min-w-full min-h-screen flex justify-center items-center ">{
-          ispay === true && <div className="min-w-full min-h-screen flex justify-center items-center">
+        <div className="min-w-full flex justify-center items-center ">{
+          ispay === true && <div className="min-w-full flex justify-center items-center">
 
             <Dialog open={true} handler={() => {
 

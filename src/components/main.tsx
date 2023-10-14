@@ -12,11 +12,13 @@ export function Main() {
         <div className="mt-8 mb-2 w-full h-[400px] lg:h-[600px] flex justify-center items-center p-4" id="conteinerFoto1">
             <Link href="/cadastro" className="bg-black p-2 rounded-lg hover:bg-transparent hover:text-white transition-500">Inscreva-se já</Link>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col justify-center items-center gap-4">
           <Typography className="text-font text-xl">Investimento</Typography>
           <Typography id="price-antes" className="text-center">30.000,00kz</Typography>
 
           <Typography className="text-xl font-bold text-center">10.000,00kz</Typography>
+
+          <Typography className="text-xs text-center">IBAN AO060040000093684573 10 158</Typography> 
         </div>
 
         <div className="min-w-full mt-4">
