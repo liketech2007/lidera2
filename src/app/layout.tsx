@@ -2,6 +2,7 @@ import { What } from '@/components/what'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import foto3 from "../assets/foto3.jpeg"
+import icon from "../assets/icon.png"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,6 +38,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
+      <head>
+        <link rel="icon" type="image/x-icon" href={icon.src} />
+      </head>
       <body className={`${inter.className} min-w-full min-h-screen flex flex-col items-center`}>
         {children}
         <What />
