@@ -16,6 +16,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#conteinerFoto2 {
+  background-image: url('../assets/foto2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #price-antes {
   text-decoration: line-through;

@@ -32,16 +32,15 @@ export function Main() {
 
           <Typography className="text-xl font-bold text-center">10.000,00kz</Typography>
 
-          <Typography className="text-xs text-center">IBAN AO060040000093684573 10 158</Typography> 
+          <Typography className="text-xs text-center">Até ao dia 07 de Novembro.</Typography> 
         </div>
-        <div className="min-w-full flex flex-col gap-6 justify-center items-center mt-4">
-          <img src={foto2.src} className="w-full h-[400px]  lg:w-[80%] lg:h-[700px]" />
-
+        <div className="min-w-full flex gap-6 justify-center items-end mt-4 w-full h-[400px] lg:h-[600px]" id="conteinerFoto2">
+          
           <Typography className="text-xl text-center mt-4">Estamos a tua espera</Typography>
         </div>
         <div className="flex flex-col justify-center items-center gap-6">
           <Typography className="text-xl text-center mt-4">Nossos Parceiros</Typography>
-          
+        </div>  
           <div className="flex gap-8 flex-wrap">
             <img src={p1.src} width="75" height="75" />
             <img src={p2.src} width="75" height="75" />
@@ -51,7 +50,7 @@ export function Main() {
             <img src={p6.src} width="75" height="75" />
             <img src={p7.src} width="75" height="75" />
           </div>
-        </div>
+        
       </div>
     </main>
   )
