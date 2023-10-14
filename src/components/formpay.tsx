@@ -126,7 +126,7 @@ export function FormPay() {
         
       } else {
         console.log("Esse pagamento já foi verificado.")
-        setSms("Esse pagamento já foi verjficado.")
+        setSms("Esse pagamento já foi verificado.")
         setLoad(false)
       }
 
