@@ -23,6 +23,8 @@ export function FormPay() {
   const [ispay, setIspay] = useState(false)
   const [ibanC, setIbanC] = useState("")
   const [loadFile,setLoadFile] = useState(false)
+  const [date, setDate] = useState("")
+  const [hora,setHora] = useState("")
   
   const uploadFile = async (e: any) => {
     setLoadFile(true)
@@ -72,6 +74,8 @@ export function FormPay() {
     const searchHora = data.match(hora)
     const searchDate = data.match(date)
     const searchIBANCliente = data.match(IBANCliente)
+    setDate(`${searchDate?.[0]}`)
+    setHora(`${searchHora?.[0]}`)
 
     const datapay = {
       IBAN: verificationIBAN, valor: verificationValor, data: searchDate?.[0],
@@ -135,7 +139,7 @@ export function FormPay() {
   }
                      
   return (
-    <form onSubmit={verificationPay} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"> 
+    <form onSubmit={verificationPay} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 min-w-full flex flex-col items-center"> 
       <div className="mb-4 flex flex-col"> 
         <div className="mb-4"> <label className="block text-sm font-medium text-white">Nome</label> 
         <input type="text" name="nome" className="mt-1 p-2 block w-full bg-zinc-900 text-white" onChange={(e) => {
@@ -181,17 +185,17 @@ export function FormPay() {
         <button type="submit" className="bg-white text-black py-4 px-4 rounded-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-opacity-50 flex gap-3 justify-center items-center" >
           {load === true && <Spinner className="animate-spin" color="blue" />}Enviar</button>
         </div>
-        <div>{
-          ispay === true && <div>
+        <div className="min-w-full min-h-screen flex justify-center items-center ">{
+          ispay === true && <div className="min-w-full min-h-screen flex justify-center items-center">
 
             <Dialog open={true} handler={() => {
 
-            }} className="bg-[#000] flex flex-col justify-center items-center" id="comprovativo">
+            }} className="min-w-full fixed top-1 left-1 bg-[#000] flex flex-col justify-center items-center">
               
             <DialogHeader>Pagemento Verificado Com Sucesso</DialogHeader>
               
-              <DialogBody divider> 
-              O cliente {name} com IBAN {ibanC} fez um pagamento de 10.000,00kz para a empresa Lidera com o IBAN  AO060040000093684573 10 158
+              <DialogBody divider id="comprovativo" className="w-[248px] h-[716] bg-black tex-center"> 
+              O cliente {name} com IBAN {ibanC} fez um pagamento de 10.000,00kz para a empresa Lidera com o IBAN  AO060040000093684573 10 158 no dia {date} as {hora}.
               </DialogBody>
                
             <DialogFooter> <Button className="mr-1 p-3 bg-white text-black hover:bg-black hover:text-white trabsituon-500" onClick={() => {
@@ -205,11 +209,11 @@ export function FormPay() {
                 callback: (doc1: any) => {
                   doc1.save('comprovativo.pdf')
                 },
-                margin: 0.5,
+                margin: 0,
                 filename: 'comprovativo.pdf', 
               } )
               
-              }}> <span>Bakxar Comprovativo</span> </Button> 
+              }}> <span>Baixar Comprovativo</span> </Button> 
             </DialogFooter>
             </Dialog>
           </div>

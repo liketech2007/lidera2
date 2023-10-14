@@ -5,7 +5,7 @@ import { MainLogin } from "@/components/mainLogin";
 
 export default function CadastroPage() {
   return (
-    <div className="min-w-full min-h-screen flex flex-col items-center">
+    <div>
       <Header />
       <MainLogin />
       <Footer />
