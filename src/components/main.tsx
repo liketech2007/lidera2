@@ -1,6 +1,6 @@
 "use client"
 import foto2 from "../assets/foto2.jpg"
-import { Typography, Button, } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Link from "next/link"
 
 export function Main() {

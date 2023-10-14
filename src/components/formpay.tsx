@@ -4,13 +4,7 @@ import { supabase } from "../utils/supabase"
 import {
   Button,
   Dialog,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Input,
-  Checkbox, Spinner, Alert,
+  Spinner, Alert,
   DialogHeader, DialogBody, DialogFooter,
 } from "@material-tailwind/react";
 import jsPDF from "jspdf";
@@ -88,7 +82,6 @@ export function FormPay() {
       content,
     }
 
-    console.log(datapay)
     setIbanC(`${datapay.IBANClient}`)
 
     if (datapay.IBAN === true && datapay.valor === true) {
@@ -171,7 +164,7 @@ export function FormPay() {
         <div className="mb-4"> <label className="text-sm font-medium text-white flex flex-col gap-2 jsustify-center items-center" htmlFor="comp">Comprovativo do Pagamento (PDF)
           <UploadSimple size={64} className="hover:text-zinc-400 transition-500 text-3xl" />
           {
-            loadFile == true && <Spinner color="blue" />
+            loadFile == true && <Spinner className="animate-spin" color="blue" />
           }
         </label> 
           <input type="file" id="comp" className="hidden" required onChange={(e) => {
@@ -186,7 +179,7 @@ export function FormPay() {
         </div>
         {sms !== null && <Alert className="m-3">{sms}</Alert>}
         <button type="submit" className="bg-white text-black py-4 px-4 rounded-md hover:bg-gray-200 focus:outline-none focus:ring focus:ring-opacity-50 flex gap-3 justify-center items-center" >
-          {load === true && <Spinner color="blue" />}Enviar</button>
+          {load === true && <Spinner className="animate-spin" color="blue" />}Enviar</button>
         </div>
         <div>{
           ispay === true && <div>

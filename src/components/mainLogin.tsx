@@ -1,4 +1,6 @@
+"use client"
 import { FormPay } from "./formpay"
+
 export function MainLogin() {
   return (
     <main className="max-auto max-w-screen-xl py-2 p-x4 lg:px-8 lg:py-4 flex flex-col gap-6 justify-center items-center ">
